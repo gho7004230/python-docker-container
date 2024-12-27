@@ -16,3 +16,13 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+  
+    - name: Deploy to Docker
+uses: tvrcgo/docker-builder@v0.3.1
+with:
+  registry: docker.io
+  username: ${{ secrets.DOCKER_HUB_USERNAME }}
+  password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+  # Namespace and repository. format: namespace/repository
+  repository: gho7004230/python
+  tag: latest
