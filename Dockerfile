@@ -1,4 +1,10 @@
-FROM python:latest
+FROM ubuntu:latest
+
+RUN apt update
+
+RUN apt install python3 -y
+
+RUN alias python='python3'
 
 ADD main.py .
 
