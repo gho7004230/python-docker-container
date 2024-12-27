@@ -21,7 +21,7 @@ jobs:
       uses: tvrcgo/docker-builder@v0.3.1
       with:
          registry: docker.io
-         username: ${{ secrets.DOCKER_HUB_USERNAME }}
-         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+         username: gho7004230
+         password: dckr_pat_f0J5ifSuRfZL7Fo2JgiXVeb2Phg
          repository: gho7004230/python
          tag: latest
