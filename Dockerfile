@@ -8,4 +8,4 @@ RUN alias python='python3'
 
 ADD main.py .
 
-CMD ['python3', './main.py']
+CMD ['python', './main.py']
